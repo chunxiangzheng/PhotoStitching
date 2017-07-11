@@ -3,7 +3,7 @@ import re
 import math
 
 class ComFileHandler:
-  coordinates = null
+  coordinates = None
   
   def __init__(self, comFile):
     with open(comFile, "r") as fin:
@@ -26,6 +26,6 @@ class ComFileHandler:
     coordA = self.coordinates[atomA]
     coordB = self.coordinates[atomB]
     distance = 	(coordA[0] - coordB[0]) ** 2
-	distance += (coordA[1] - coordB[1]) ** 2
-	distance += (coordA[2] - coordB[2]) ** 2
-	return math.sqrt(distance)
+    distance += (coordA[1] - coordB[1]) ** 2
+    distance += (coordA[2] - coordB[2]) ** 2
+    return math.sqrt(distance)
